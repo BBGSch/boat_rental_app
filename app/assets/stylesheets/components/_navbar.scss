@@ -10,3 +10,59 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.btn-ghost {
+  color: white;
+  background-color: pink;
+  border: 1px solid skyblue;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: white;
+}
+
+.boat_navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+
+
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 50%;
+    background-image: none;
+    transition: background-color .3s;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: rgba(105, 48, 195, 0.4);
+    // background-image: linear-gradient(rgba(105, 48, 195, 0.7),rgba(86, 207, 225,0.7));
+  }
+
+}
+
+ .home{
+      font-size: 35px;
+    }
+
+//keyframe animations
