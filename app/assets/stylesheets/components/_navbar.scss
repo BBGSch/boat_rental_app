@@ -36,7 +36,43 @@
   display: flex;
   justify-content: space-between;
 
+.dropdown {
+  display: inline-block;
+  z-index: 0;
+}
 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  margin-top: 20px;
+  margin-right: 20px;
+  position: relative;
+  z-index: -1;
+  background-color: rgba(105, 48, 195, 0.2);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgba(105, 48, 195, 0.4);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
 
   li {
     float: left;
@@ -51,18 +87,18 @@
     border-radius: 50%;
     background-image: none;
     transition: background-color .3s;
+    font-size: 30px;
   }
 
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: rgba(105, 48, 195, 0.4);
+    background-color: rgba(105, 48, 195, 0.2);
     // background-image: linear-gradient(rgba(105, 48, 195, 0.7),rgba(86, 207, 225,0.7));
   }
 
 }
 
- .home{
-      font-size: 35px;
-    }
+
+
 
 //keyframe animations
