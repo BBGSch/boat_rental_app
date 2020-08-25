@@ -39,6 +39,7 @@
 .dropdown {
   display: inline-block;
   z-index: 0;
+  position: relative;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -46,8 +47,8 @@
   display: none;
   margin-top: 20px;
   margin-right: 20px;
-  position: relative;
-  z-index: -1;
+  position: absolute;
+  z-index: 100;
   background-color: rgba(105, 48, 195, 0.2);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
