@@ -11,6 +11,10 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+    <button class="btn btn-secondary"> 
+      <%= link_to 'Back', boats_path %> 
+    </button>
+
   </div>
 <% end %>
