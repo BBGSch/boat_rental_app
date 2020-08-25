@@ -25,6 +25,7 @@ class BoatsController < ApplicationController
   # POST /boats.json
   def create
     @boat = Boat.new(boat_params)
+    @boat.user = current_user
 
     respond_to do |format|
       if @boat.save

@@ -12,10 +12,12 @@
   </head>
 
   <body>
-    <%= yield %>
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+    redirect_to
+    <%#= link_to "log out", "/users/sign_out", method: "delete" %>
 
 
+    <%= render 'shared/flashes' %>
+    <%= yield %> 
+  
   </body>
 </html>
