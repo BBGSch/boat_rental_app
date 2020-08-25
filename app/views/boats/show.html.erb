@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>User:</strong>
@@ -26,4 +26,25 @@
 </p>
 
 <%= link_to 'Edit', edit_boat_path(@boat) %> |
-<%= link_to 'Back', boats_path %>
+<%= link_to 'Back', boats_path %> -->
+
+
+<div>
+  <div class="boats_show">
+
+  <div class="card-show">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-show-infos">
+      <div>
+        <h2><%= @boat.description %></h2>
+        <p> <%= @boat.location %> </p>
+        <p><%= @boat.capacity %></p>
+        <p></p>
+      </div>
+      <h2 class="card-show-pricing"><%= @boat.price %></h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
+  </div>
+</div>

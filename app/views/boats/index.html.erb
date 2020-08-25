@@ -1,5 +1,27 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
+
+
+<div>
+  <div class="boats_list">
+
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>boat.description</h2>
+        <p> boat.location </p>
+      </div>
+      <h2 class="card-trip-pricing">boat.price</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<!-- <div class="container">
 <h1>Boats</h1>
 
 <table>
@@ -33,3 +55,25 @@
 <br>
 
 <%= link_to 'New Boat', new_boat_path %>
+</div>
+ -->
+<!-- <div>
+  <div class="boats_list">
+    <% @boats.each do |boat| %>
+
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= boat.description %></h2>
+        <p><%= boat.location %></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= boat.price %></h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+  <% end %>
+
+  </div>
+</div>
+ -->

@@ -13,8 +13,21 @@
 @import "components/navbar";
 @import "components/footer";
 @import "components/banner";
+@import "components/boat-card";
 @import "pages/index";
+@import "pages/boats-index";
+@import "pages/boats-show";
 
 body {
-  background: white;
+  background-image: linear-gradient(rgba(83, 144, 217, 0.4),rgba(128, 255, 219,0.4));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 80px;
 }
+
+.pages-home {
+  padding-top: 0;
+}
+
