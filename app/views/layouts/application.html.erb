@@ -12,12 +12,12 @@
   </head>
 
   <body>
-    redirect_to
-    <%#= link_to "log out", "/users/sign_out", method: "delete" %>
 
-
+    <%= render "./shared/navbar" %>
     <%= render 'shared/flashes' %>
-    <%= yield %> 
-  
+
+    <%= yield %>
+
+    <%= render "./shared/footer" %>
   </body>
 </html>
