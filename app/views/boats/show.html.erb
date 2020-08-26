@@ -33,9 +33,7 @@
   <div class="boats_show">
 
     <div class="card-show">
-      <% if @boat.photo.attached? %>
-        <%= cl_image_tag @boat.photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
+
       <div class="card-show-infos">
         <div>
           <h2><%= @boat.description %></h2>
@@ -44,13 +42,10 @@
           <p></p>
         </div>
         <h2 class="card-show-pricing"><%= @boat.price %></h2>
+        <a href=<%=user_path(@boat.user)%>>
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </a>
       </div>
-
-      <h2 class="card-show-pricing"><%= @boat.price %></h2>
-      <a href=<%=user_path(@boat.user)%>>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </a>
     </div>
 
   </div>

@@ -8,11 +8,13 @@
   margin-bottom: 10px;
 }
 
-.card-trip > img {
-  height: 350px;
+
+.card-trip img {
+  max-height: 350px;
   width: 100%;
   object-fit: cover;
 }
+
 
 .card-trip h2 {
   font-size: 16px;
@@ -51,7 +53,7 @@
   margin-bottom: 20px;
 }
 
-.card-show > img {
+.card-show img {
   height: 350px;
   width: 100%;
   object-fit: cover;

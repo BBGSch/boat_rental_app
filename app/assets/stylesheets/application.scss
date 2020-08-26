@@ -14,6 +14,7 @@
 @import "components/navbar";
 @import "components/footer";
 @import "components/banner";
+@import "components/user-card";
 
 @import "components/_form";
 @import "pages/home";
@@ -27,6 +28,7 @@
 @import "pages/index";
 @import "pages/boats-index";
 @import "pages/boats-show";
+@import "pages/users_show";
 
 body {
   background-image: linear-gradient(rgba(83, 144, 217, 0.4),rgba(128, 255, 219,0.4));

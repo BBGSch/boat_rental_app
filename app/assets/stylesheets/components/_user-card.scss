@@ -1,0 +1,43 @@
+.users_show_card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 70vw;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.users_show_card > img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.users_show_card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.users_show_card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.users_show_card .users_show_card-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  height: 40vh;
+}
+
+.users_show_card-infos .card-show-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
