@@ -1,2 +1,4 @@
-<h2><%= boat.description %></h2>
+<%= link_to boat_path(boat) do %>
+<h6><%= boat.description %></h6>
 <p><%= boat.location %></p>
+<% end %>
