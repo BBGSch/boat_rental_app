@@ -4,6 +4,8 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 70vw;
   border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
 }
 
 .card-trip > img {
@@ -28,7 +30,7 @@
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   position: relative;
 }
@@ -46,6 +48,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 70vw;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .card-show > img {
