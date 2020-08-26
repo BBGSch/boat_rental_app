@@ -52,7 +52,7 @@ holland.photo.attach(io: hollandpic, filename: 'hollandpic.png', content_type: '
 onassispic = URI.open('https://greece.greekreporter.com/files/606x341_230948_poleitai-xristina-o-onasis-ploi-696x391-1.jpg')
 onassis.photo.attach(io: onassispic, filename: 'onassispic.png', content_type: 'image/png')
 
-big_boatpic = URI.open('https://lh3.googleusercontent.com/proxy/0do-AtyvCSLGxM723dIH3Rnyb4NrXbHLjsk30LMOHj-hWJC4B1mtKTy_-dAeBvuA3kejzKJARyQ2ZbzRqTdbzxo3BmMd_wlMy8yFwElo5A')
+big_boatpic = URI.open('https://news.gtp.gr/wp-content/uploads/2000/06/STRINTZIS-ITHAKI.jpg')
 big_boat.photo.attach(io: big_boatpic, filename: 'big_boatpic.png', content_type: 'image/png')
 
 
