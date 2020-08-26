@@ -1,7 +1,5 @@
 <!-- <p id="notice"><%= notice %></p> -->
 
-<% 5.times do %>
-
 <div>
   <div class="boats_list">
 
@@ -20,7 +18,7 @@
   </div>
 </div>
 
-<% end%>
+<%= render 'boat_map', markers: @markers %>
 
 
 <!-- <div class="container">
