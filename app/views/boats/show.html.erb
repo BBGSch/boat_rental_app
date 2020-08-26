@@ -32,19 +32,23 @@
 <div>
   <div class="boats_show">
 
-  <div class="card-show">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-show-infos">
-      <div>
-        <h2><%= @boat.description %></h2>
-        <p> <%= @boat.location %> </p>
-        <p><%= @boat.capacity %></p>
-        <p></p>
+    <div class="card-show">
+      <% if @boat.photo.attached? %>
+        <%= cl_image_tag @boat.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+      <div class="card-show-infos">
+        <div>
+          <h2><%= @boat.description %></h2>
+          <p> <%= @boat.location %> </p>
+          <p><%= @boat.capacity %></p>
+          <p></p>
+        </div>
+        <h2 class="card-show-pricing"><%= @boat.price %></h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
-      <h2 class="card-show-pricing"><%= @boat.price %></h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
-  </div>
 
   </div>
 </div>
+
+
