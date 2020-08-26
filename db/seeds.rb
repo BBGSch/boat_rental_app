@@ -23,12 +23,12 @@ titanic = Boat.create( location: "24 Prins Hendrikkade, Amsterdam", capacity: 3,
 # titanic.save
 puts titanic
 
-holland = Boat.create( location: "24 Ijsbanpaad, Amsterdam", capacity: 2, user_id: 1, description: "Beautiful gold boat- great for day trips", price: 80.0)
+holland = Boat.create( location: "24 Ijsbaanpad, Amsterdam", capacity: 2, user_id: 1, description: "Beautiful gold boat- great for day trips", price: 80.0)
 # holland.user = roman
 # holland.save
 puts holland
 
-onassis = Boat.create( location: "24 Albert Kuypstraat, Amsterdam", capacity: 8, user_id: 2, description: "Beautiful living boat- great for day trips", price: 200.0)
+onassis = Boat.create( location: "24 Albert Cuypstraat, Amsterdam", capacity: 8, user_id: 2, description: "Beautiful living boat- great for day trips", price: 200.0)
 # onassis.user = jane
 # onassis.save
 puts onassis
@@ -49,7 +49,7 @@ titanic.photo.attach(io: titanicpic, filename: 'titanicpic.png', content_type: '
 hollandpic = URI.open('https://travelandynews.com/wp-content/uploads/2020/01/56523192_10156483754543406_5725163698733973504_o.jpg')
 holland.photo.attach(io: hollandpic, filename: 'hollandpic.png', content_type: 'image/png')
 
-onassispic = URI.open('https://travelandynews.com/wp-content/uploads/2020/01/56523192_10156483754543406_5725163698733973504_o.jpg')
+onassispic = URI.open('https://greece.greekreporter.com/files/606x341_230948_poleitai-xristina-o-onasis-ploi-696x391-1.jpg')
 onassis.photo.attach(io: onassispic, filename: 'onassispic.png', content_type: 'image/png')
 
 big_boatpic = URI.open('https://lh3.googleusercontent.com/proxy/0do-AtyvCSLGxM723dIH3Rnyb4NrXbHLjsk30LMOHj-hWJC4B1mtKTy_-dAeBvuA3kejzKJARyQ2ZbzRqTdbzxo3BmMd_wlMy8yFwElo5A')

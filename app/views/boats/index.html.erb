@@ -1,24 +1,26 @@
-<!-- <p id="notice"><%= notice %></p> -->
 
 
   <div class="boats_list">
-    <%@boats.each do |boat| %>
-      <a href=<%=boat_path(boat)%>>
+    <% @boats.each do |boat| %>
+      <%= link_to boat_path(boat) do %>
       <div class="card-trip">
-        <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80">
+
+        <% if boat.photo.attached? %>
+          <%= cl_image_tag boat.photo.key, height: 300, width: 600, crop: :fill %>
+        <% end %>
+
         <div class="card-trip-infos">
           <div>
-            <h2><%=boat.description%></h2>
-            <p> <%=boat.location%> </p>
+            <h2><%= boat.description %></h2>
+            <p><%= boat.location %></p>
           </div>
-          <h2 class="card-trip-pricing">$<%=boat.price%></h2>
-          <a href=<%=user_path(boat.user)%>>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" >
-          </a>
+          <h2 class="card-trip-pricing"><%= boat.price %></h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
       </div>
-      </a>
-    <%end%>
+      <% end %>
+    <% end %>
+
   </div>
 
 
@@ -29,4 +31,29 @@
 
 
 
+
+
+<%= link_to 'New Boat', new_boat_path %>
+</div>
+-->
+<!-- <div>
+  <div class="boats_list">
+    <% @boats.each do |boat| %>
+
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= boat.description %></h2>
+        <p><%= boat.location %></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= boat.price %></h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+  <% end %>
+
+  </div>
+</div>
+-->
 
