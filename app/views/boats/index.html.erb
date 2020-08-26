@@ -1,6 +1,6 @@
 <!-- <p id="notice"><%= notice %></p> -->
 
-<div>
+<!-- <div>
   <div class="boats_list">
   <%@boats.each do |boat| %>
   <a href=<%=boat_path(boat)%>>
@@ -24,31 +24,29 @@
 </div>
 
 </%= render 'boat_map', markers: @markers %>
- -->
+-->
 
 <div>
   <div class="boats_list">
-  <%@boats.each do |boat| %>
-  <a href=<%=boat_path(boat)%>>
-  <div class="card-trip">
-    
-    <% if boat.photo.attached? %>
-      <%= cl_image_tag boat.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-    
-    <div class="card-trip-infos">
-      <div>
-        <h2><%=boat.description%></h2>
-        <p> <%=boat.location%> </p>
+    <% @boats.each do |boat| %>
+      <%= link_to boat_path(boat) do %>
+      <div class="card-trip">
+
+        <% if boat.photo.attached? %>
+          <%= cl_image_tag boat.photo.key, height: 300, width: 600, crop: :fill %>
+        <% end %>
+
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= boat.description %></h2>
+            <p><%= boat.location %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= boat.price %></h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
       </div>
-      <h2 class="card-trip-pricing"><%=boat.price%></h2>
-      <a href=<%=user_path(boat.user)%>>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </a>
-    </div>
-  </div>
-  </a>
-  <%end%>
+      <% end %>
+    <% end %>
   </div>
 </div>
 <%= render 'boat_map', markers: @markers %>
@@ -95,7 +93,7 @@
 
 <%= link_to 'New Boat', new_boat_path %>
 </div>
- -->
+-->
 <!-- <div>
   <div class="boats_list">
     <% @boats.each do |boat| %>
@@ -115,4 +113,4 @@
 
   </div>
 </div>
- -->
+-->
