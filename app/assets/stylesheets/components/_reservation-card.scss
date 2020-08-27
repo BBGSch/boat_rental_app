@@ -1,0 +1,83 @@
+.card-reservation {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 70vw;
+  max-width: 750px;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+
+.card-reservation img {
+  max-height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.card-reservation h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-reservation p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-reservation .card-reservation-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-show {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 70vw;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.card-show img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-show h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-show p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-show .card-show-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  height: 40vh;
+}
+
+.card-show-infos .card-show-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}

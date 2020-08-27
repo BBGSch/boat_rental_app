@@ -1,0 +1,18 @@
+<%= simple_form_for(@reservation) do |r| %>
+  <%= r.error_notification %>
+  <%= r.error_notification message: r.object.errors[:base].to_sentence if r.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= r.input :boat_id %>
+    <%= r.input :start_date %>
+    <%= r.input :end_date %>
+  </div>
+
+  <div class="form-actions">
+    <%= r.button :submit, class: "btn btn-primary" %>
+    <button class="btn btn-secondary"> 
+      <%= link_to 'Back', reservations_path %> 
+    </button>
+
+  </div>
+<% end %>
