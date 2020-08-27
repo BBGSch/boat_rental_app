@@ -1,15 +1,21 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 <% reviews.each do |r| %>
   <div class="row">
-    <div class="col-md-3">X</div>
+    <div class="col-md-3" style="text-align: center;padding: 10px;">
+  <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm">
+  </div>
 
     <div class="col-sm-12 col-md-9">
-      <div><%= r.title %></div>
+      <h4><%= r.title %></h4>
       <% 5.times do |num|%>
         <i class="fa<%= r.stars < (num + 1) ? "r" : "s" %> fa-star text-warning"></i>
       <% end %>
-      <div><%= r.description %></div>
 
-      <div><%= r.created_at.strftime("%v") %></div>
+        <div class="ratebox text-center" data-id="0" data-rating="5"></div>
+        <p><%= r.description %></p>
+
+      <small><%= r.created_at.strftime("%v") %></small>
       </div>
     </div>
 <% end %>

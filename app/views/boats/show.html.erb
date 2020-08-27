@@ -56,7 +56,7 @@
   <div class="card-trip">
 
     <% if @boat.photo.attached? %>
-    <%= cl_image_tag @boat.photo.key, height: 300, width: 600, crop: :fill %>
+    <div class="card-trip-image"><%= cl_image_tag @boat.photo.key, height: 300, width: 600, crop: :fill %></div>
     <% end %>
 
     <div class="card-trip-infos">
