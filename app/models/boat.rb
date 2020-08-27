@@ -10,7 +10,7 @@ class Boat < ApplicationRecord
     check_range = (start_date..end_date)
 
     self.reservations.each do |reservation|
-      if reservation.confirmed?
+      if reservation.status?
         res_range = (reservation.start_date..reservation.end_date)
         if res_range.include?(start_date) || res_range.include?(end_date) || check_range.include?(res_range)
           return false

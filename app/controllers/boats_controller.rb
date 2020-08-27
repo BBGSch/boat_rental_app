@@ -14,6 +14,11 @@ class BoatsController < ApplicationController
     end
   end
 
+  def search(params)
+   boats = Boat.near(params[:location], params[:distance])
+   boats.select { |boat| boat.capacity >= params[:guests] && boat.available?(params[:start_date], params[:end_date]) }
+  end
+
   # GET /boats/1
   # GET /boats/1.json
   def show
