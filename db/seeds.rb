@@ -12,6 +12,12 @@ roman = User.create(email: "user@example.com", password: "123ABC", name: "Roman 
 puts roman
 jane = User.create(email: "user2@example.com", password: "123ABC", name: "Jane Abramovich")
 puts jane
+pauper1 = User.create(email: "user3@example.com", password: "123ABC", name: "Joop Daalder")
+puts pauper1
+pauper2 = User.create(email: "user4@example.com", password: "123ABC", name: "Jannie Daalder")
+puts pauper2
+
+
 
 boaty = Boat.create( location: "24 Tweede Helmersstraat, Amsterdam", user_id: 1, capacity: 6, description: "Beautiful old boat- great for day trips", price: 99.0)
 #boaty.user = roman
@@ -56,3 +62,14 @@ big_boatpic = URI.open('https://news.gtp.gr/wp-content/uploads/2000/06/STRINTZIS
 big_boat.photo.attach(io: big_boatpic, filename: 'big_boatpic.png', content_type: 'image/png')
 
 
+reservation1 = Reservation.create(user_id: 3, boat_id: 1, start_date: Date.new(2019, 12, 8), end_date: Date.new(2019, 12, 20), total_price: 100.0, status: "unconfirmed")
+puts reservation1
+
+reservation2 = Reservation.create(user_id: 4, boat_id: 4, start_date: Date.new(2020, 05, 10), end_date: Date.new(2020, 05, 20), total_price: 200.0, status: "unconfirmed")
+puts reservation2
+
+review1 = Review.create(user_id: 3, reservation_id: 1, stars: 3, description: "bit tiny for my taste but otherwise enjoyable")
+puts review1
+
+review2 = Review.create(user_id: 4, reservation_id: 2, stars: 4, description: "ideal boat for bachelorette party. thank you")
+puts review2
