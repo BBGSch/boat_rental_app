@@ -6,6 +6,7 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+    @review = Review.new
   end
 
   def new
