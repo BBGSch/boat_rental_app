@@ -38,8 +38,23 @@ class ReservationsController < ApplicationController
   def confirm
     @reservation = Reservation.find(params[:id])
     @reservation.status = true
+    @reservation.save
+    redirect_to confirm_reservation_show_path(@reservation)
   end
 
+  def decline
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to decline_reservation_show_path
+  end
+
+  def decline_show
+    @reservations = Reservation.all
+  end
+
+  def confirm_show
+    @reservation = Reservation.find(params[:id])
+  end
 
   private
 
