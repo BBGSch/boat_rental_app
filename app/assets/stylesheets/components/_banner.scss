@@ -2,10 +2,21 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
-  z-index: -10;
+}
 
+.search_bar{
+  background-color: rgba(255, 255, 255, .6);
+  width: 480px;
+  height: 60px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
 }
 
 .banner h1 {
@@ -26,18 +37,23 @@
 .banner input {
   border-radius: 5px;
   border: none;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, .6);
+  color: white;
   text-align: center;
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
+  transition: height .3s, background-color .3s;
+  border-radius: 50px;
 }
 
+
 .banner input:focus {
+  background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(105, 48, 195, 0.4);
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  height: 4rem;
 }
 
 .btn-ghost {
@@ -48,6 +64,7 @@
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
+  margin-top: 10px;
   transition: opacity 0.3s ease;
 }
 
