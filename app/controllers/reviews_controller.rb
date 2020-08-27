@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
+
   def index
-    @reviews = @boats.id
+    @reviews = Review.all
   end
 
   def new
@@ -17,6 +18,8 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:comment, :star, :boat_id)
+    params.require(:review).permit(:description, :title, :stars, :user_id, :reservation_id)
   end
+
+
 end
