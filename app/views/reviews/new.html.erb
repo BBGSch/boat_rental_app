@@ -1,0 +1,10 @@
+<h1>Reviews#new</h1>
+<%#= render 'form' %>
+<div class="col-5">
+  <%= simple_form_for @review do |f|%>
+  <%= f.input :title %>
+  <%= f.input :comment %>
+  <%= f.input :star %>
+  <%= f.submit "Add Review" %>
+  <% end %>
+</div>
