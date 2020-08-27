@@ -12,8 +12,13 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user = current_user
-    @review.reservation = params[:id]
-    raise
+    @reservation = Reservation.find(params[:reservation_id])
+    @review.reservation = @reservation
+    if @review.save
+      redirect_to boat_path(@reservation.boat)
+    else
+      render :new
+    end
   end
 
   private

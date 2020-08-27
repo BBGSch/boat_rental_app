@@ -1,9 +1,15 @@
-<% @reviews.order(id: :desc).each do |r| %>
-<div class="row">
-  <div class="col-md-12">
-    <div><%= r.created_at.strftime("%v") %></div>
-    <div><%= r.comment %></div>
-    <div><%= r.stars %></div>
-  </div>
-</div>
+<% reviews.each do |r| %>
+  <div class="row">
+    <div class="col-md-3">X</div>
+
+    <div class="col-sm-12 col-md-9">
+      <div><%= r.title %></div>
+      <% 5.times do |num|%>
+        <i class="fa<%= r.stars < (num + 1) ? "r" : "s" %> fa-star text-warning"></i>
+      <% end %>
+      <div><%= r.description %></div>
+
+      <div><%= r.created_at.strftime("%v") %></div>
+      </div>
+    </div>
 <% end %>
