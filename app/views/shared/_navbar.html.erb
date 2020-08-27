@@ -3,15 +3,16 @@
   <li><a href=<%= root_path%>><i class="fas fa-ship"></i></a></li>
   </div>
   <div>
-  <div class="dropdown">
-    <li><a href="about.asp"><i class="fas fa-user-alt"></i></a></li>
-     <div class="dropdown-content">
-    <a href=<%=boats_path%>>Browse Boats</a>
-    <a href="#">My bookings</a>
-    <a href=<%=user_path(current_user)%>>My Profile</a>
-    <a href=<%=new_boat_path(current_user)%>>New Boat</a>
-  </div>
-
+  <% if current_user  %>
+    <div class="dropdown">
+      <li><a href="about.asp"><i class="fas fa-user-alt"></i></a></li>
+       <div class="dropdown-content">
+      <a href=<%=boats_path%>>Browse Boats</a>
+      <a href="#">My bookings</a>
+      <a href=<%=user_path(current_user)%>>My Profile</a>
+      <a href=<%=new_boat_path(current_user)%>>New Boat</a>
+    </div>
+  <% end %>
 </div>
 
   </div>
