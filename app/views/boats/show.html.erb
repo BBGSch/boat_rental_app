@@ -53,23 +53,30 @@
 
 <div class="boats_show">
 
-<div class="card-trip">
+  <div class="card-trip">
 
-        <% if @boat.photo.attached? %>
-          <%= cl_image_tag @boat.photo.key, height: 300, width: 600, crop: :fill %>
-        <% end %>
+    <% if @boat.photo.attached? %>
+    <div class="card-trip-image"><%= cl_image_tag @boat.photo.key, height: 300, width: 600, crop: :fill %></div>
+    <% end %>
 
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= @boat.description %></h2>
-            <p><%= @boat.location %></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#"></a><button type="button" class="btn btn-primary">Book</button>
-          </div>
-          <h2 class="card-trip-pricing"><%= @boat.price %></h2>
-           <a href=<%=user_path(@boat.user)%>> <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> </a>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @boat.description %></h2>
+        <p><%= @boat.location %></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#"></a><button type="button" class="btn btn-primary">Book</button>
+      </div>
+      <h2 class="card-trip-pricing"><%= @boat.price %></h2>
+      <a href=<%=user_path(@boat.user)%>> <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> </a>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container">
+          <div><%= render "reviews/list",  reviews: @boat.reviews %></div>
         </div>
       </div>
+    </div>
+  </div>
 </div>
 
