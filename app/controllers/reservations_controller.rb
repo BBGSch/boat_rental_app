@@ -34,6 +34,12 @@ class ReservationsController < ApplicationController
     redirect_to reservation_path(reservations)
   end
 
+  def confirm
+    @reservation = Reservation.find(params[:id])
+    @reservation.status = true
+  end
+
+
   private
 
   def reservation_params
