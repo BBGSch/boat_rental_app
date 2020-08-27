@@ -10,7 +10,7 @@
 
 .search_bar{
   background-color: rgba(255, 255, 255, .6);
-  width: 480px;
+  width: 850px;
   height: 60px;
   top: 0;
   display: flex;
@@ -34,21 +34,20 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.banner input {
+.banner input[type=text], input[type=number], input[type=date]{
   border-radius: 5px;
   border: none;
   background-color: rgba(255, 255, 255, .6);
-  color: white;
+  color: rgba(105, 48, 195, 0.8);
   text-align: center;
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
   transition: height .3s, background-color .3s;
-  border-radius: 50px;
 }
 
 
-.banner input:focus {
+.banner input[type=text]:focus, input[type=number]:focus, input[type=date]:focus {
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid rgba(105, 48, 195, 0.4);
   outline: none !important;
