@@ -1,0 +1,9 @@
+<% @reviews.order(id: :desc).each do |r| %>
+<div class="row">
+  <div class="col-md-12">
+    <div><%= r.created_at.strftime("%v") %></div>
+    <div><%= r.comment %></div>
+    <div><%= r.stars %></div>
+  </div>
+</div>
+<% end %>
