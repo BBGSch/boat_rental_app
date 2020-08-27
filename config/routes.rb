@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'reviews/new'
-  get 'reviews/create'
-  get 'reviews/index'
-
   resources :reservations do
-    resources :reviews, only: [:create, :new]
+    resources :reviews, only: [:create, :new, :index]
   end
   resources :boats
 
