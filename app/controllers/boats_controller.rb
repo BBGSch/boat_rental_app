@@ -1,6 +1,6 @@
 class BoatsController < ApplicationController
   before_action :set_boat, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: :index
+
   # GET /boats
   # GET /boats.json
   def index
@@ -9,11 +9,14 @@ class BoatsController < ApplicationController
     @markers = @boats.map do |boat|
       {
         lat: boat.latitude,
-        lng: boat.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { boat: boat }),
-        image_url: helpers.asset_url("http://res.cloudinary.com/majel45/image/upload/c_fill,h_50,w_50/#{boat.photo.key}")
+        lng: boat.longitude
       }
     end
+  end
+
+  def search(params)
+   boats = Boat.near(params[:location], params[:distance])
+   boats.select { |boat| boat.capacity >= params[:guests] && boat.available?(params[:start_date], params[:end_date]) }
   end
 
   # GET /boats/1
