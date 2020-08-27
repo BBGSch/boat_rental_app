@@ -62,14 +62,14 @@ big_boatpic = URI.open('https://news.gtp.gr/wp-content/uploads/2000/06/STRINTZIS
 big_boat.photo.attach(io: big_boatpic, filename: 'big_boatpic.png', content_type: 'image/png')
 
 
-reservation1 = Reservation.create(user_id: 3, boat_id: 1, start_date: Date.new(2019, 12, 8), end_date: Date.new(2019, 12, 20), total_price: 100.0, status: "unconfirmed")
+reservation1 = Reservation.create(user_id: 3, boat_id: 1, start_date: Date.new(2019, 12, 8), end_date: Date.new(2019, 12, 20), total_price: 100.0, status: false)
 puts reservation1
 
-reservation2 = Reservation.create(user_id: 4, boat_id: 4, start_date: Date.new(2020, 05, 10), end_date: Date.new(2020, 05, 20), total_price: 200.0, status: "unconfirmed")
+reservation2 = Reservation.create(user_id: 4, boat_id: 4, start_date: Date.new(2020, 05, 10), end_date: Date.new(2020, 05, 20), total_price: 200.0, status: false)
 puts reservation2
 
-review1 = Review.create(user_id: 3, reservation_id: 1, stars: 3, description: "bit tiny for my taste but otherwise enjoyable")
+review1 = Review.create(user_id: 3, reservation_id: 1, stars: 3, title: "pretty, pretty good", description: "bit tiny for my taste but otherwise enjoyable")
 puts review1
 
-review2 = Review.create(user_id: 4, reservation_id: 2, stars: 4, description: "ideal boat for bachelorette party. thank you")
+review2 = Review.create(user_id: 4, reservation_id: 2, stars: 4, title: "good party boat", description: "ideal boat for bachelorette party. thank you")
 puts review2
