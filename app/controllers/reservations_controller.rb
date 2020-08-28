@@ -1,8 +1,8 @@
 class ReservationsController < ApplicationController
 
   def index
-    @reservations = Reservation.all
-    # @reservations = Reservation.all.select{|reservation| reservation.user == current_user || reservation.boat.user == current_user}
+    # @reservations = Reservation.all
+    @reservations = Reservation.all.select{|reservation| reservation.user == current_user || reservation.boat.user == current_user}
   end
 
   def show
@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
 
   def new
     @reservation = Reservation.new
-    # @reservation.boat = Boat.find(params[:id])
+    @reservation.boat = Boat.find(params[:format])
   end
 
   def create
