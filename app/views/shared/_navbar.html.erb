@@ -13,10 +13,17 @@
     <div class="dropdown">
       <li><a href="about.asp"><i class="fas fa-user-alt"></i></a></li>
        <div class="dropdown-content">
-      <a href=<%=boats_path%>>Browse Boats</a>
-      <a href=<%=reservations_path%>>My bookings</a>
-      <a href=<%=user_path(current_user)%>>My Profile</a>
-      <a href=<%=new_boat_path(current_user)%>>New Boat</a>
+      <%if current_user %>
+        <a href=<%=boats_path%>>Browse Boats</a>
+        <a href=<%=reservations_path%>>My bookings</a>
+        <a href=<%=user_path(current_user)%>>My Profile</a>
+        <a href=<%=new_boat_path(current_user)%>>New Boat</a>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      <%else%>
+        <a href=<%=boats_path%>>Browse Boats</a>
+        <a href=<%=user_session_path%>>Sign Up</a>
+        <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+      <%end%>
     </div>
 </div>
 

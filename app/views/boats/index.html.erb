@@ -13,7 +13,6 @@
 
 
 
-
 <div class="boats_list">
     <% @boats.each do |boat| %>
      <%= link_to boat_path(boat) do %>
@@ -32,8 +31,7 @@
             <div class="post_content">
 
                 <h1><%=boat.description%></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
-                    dolorum ex exercitationem.</p>
+                <p>Extremely high quality boat for your enjoyment. Rent with you and your friends fro an amazing day on the water.</p>
 
                 <div class="container_infos">
                     <div class="postedBy">
@@ -63,8 +61,11 @@
     <br>
     <% end %>
 
-<%= render 'boat_map', markers: @markers %>
 </div>
+
+
+<%= render 'boat_map', markers: @markers %>
+<br>
 
 <!--
 
