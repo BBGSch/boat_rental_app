@@ -1,7 +1,8 @@
 class ReservationsController < ApplicationController
 
   def index
-    @reservations = Reservation.all
+    # @reservations = Reservation.all
+    @reservations = Reservation.all.select{|reservation| reservation.user == current_user || reservation.boat.user == current_user}
   end
 
   def show
@@ -11,9 +12,11 @@ class ReservationsController < ApplicationController
 
   def new
     @reservation = Reservation.new
+    @reservation.boat = Boat.find(params[:format])
   end
 
   def create
+    # @reservation.boat = Boat.find(params[:format])
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
     @reservation.save
@@ -40,13 +43,21 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     @reservation.status = true
     @reservation.save
-    redirect_to confirm_reservation_show_path(@reservation)
+    redirect_to reservation_path(@reservation)
+    flash.notice = "Reservation confirmed"
   end
 
   def decline
     @reservation = Reservation.find(params[:id])
-    @reservation.destroy
-    redirect_to decline_reservation_show_path
+    if current_user == @reservation.boat.user
+      @reservation.destroy
+      redirect_to reservations_path
+      flash.notice = "Reservation declined"
+    else
+      @reservation.destroy
+      redirect_to boats_path
+      flash.notice = "Reservation cancelled"
+    end
   end
 
   def decline_show

@@ -1,11 +1,70 @@
 <div class="container container-new">
   <div class="row">
     <div class="col-6">
-
-      <h1>New Boat</h1>
+    
+      <h1>New Reservation</h1>
 
       <%= render 'form', reservation: @reservation %>
 
     </div>
   </div>
+</div>
+
+
+
+<div class="boats_show">
+
+<div class="boats-index-card">
+<div id="boatshowcontainer" class="container">
+    <div id="boatshow" class="post">
+        <div class="header_post">
+            <% if @reservation.boat.photo.attached? %>
+          <%= cl_image_tag @reservation.boat.photo.key, height: 800, width: 800, crop: :fill %>
+        <% end %>
+        </div>
+
+        <div class="body_post">
+            <div class="post_content">
+
+                <h1><%=@reservation.boat.description%></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
+                    dolorum ex exercitationem.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
+                    dolorum ex exercitationem.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
+                    dolorum ex exercitationem.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
+                    dolorum ex exercitationem.</p>
+
+                <div class="container_infos">
+                    <div class="postedBy">
+                        <span>Boat Owner</span>
+                        <%=@reservation.boat.user.name%>
+                    </div>
+
+                    <div>
+                      <a href=<%=user_path(@reservation.boat.user)%>> <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> </a>
+                    </div>
+
+                    <div class="container_tags">
+                        <span></span>
+                        <div class="tags">
+                          <%=link_to new_reservation_path(@reservation.boat) do%>
+                            <ul>
+                                <li>$<%=@reservation.boat.price%>/day</li>
+                                <li>Book</li>
+                            </ul>
+                            <%end%>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div><%= render "reviews/list",  reviews: @reservation.boat.reviews %></div>
 </div>
