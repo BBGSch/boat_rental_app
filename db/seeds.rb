@@ -16,6 +16,11 @@ pauper1 = User.create(email: "user3@example.com", password: "123ABC", name: "Joo
 puts pauper1
 pauper2 = User.create(email: "user4@example.com", password: "123ABC", name: "Jannie Daalder")
 puts pauper2
+pauper3 = User.create(email: "user5@example.com", password: "123ABC", name: "Danny Daalder")
+puts pauper3
+pauper4 = User.create(email: "user6@example.com", password: "123ABC", name: "Dalia Daalder")
+puts pauper4
+
 
 
 
@@ -62,14 +67,66 @@ big_boatpic = URI.open('https://news.gtp.gr/wp-content/uploads/2000/06/STRINTZIS
 big_boat.photo.attach(io: big_boatpic, filename: 'big_boatpic.png', content_type: 'image/png')
 
 
-reservation1 = Reservation.create(user_id: 3, boat_id: 1, start_date: Date.new(2019, 12, 8), end_date: Date.new(2019, 12, 20), total_price: 100.0, status: false)
+reservation1 = Reservation.create(user_id: 3, boat_id: 1, start_date: Date.new(2020, 12, 8), end_date: Date.new(2020, 12, 20), total_price: 100.0, status: false)
 puts reservation1
 
-reservation2 = Reservation.create(user_id: 4, boat_id: 4, start_date: Date.new(2020, 05, 10), end_date: Date.new(2020, 05, 20), total_price: 200.0, status: false)
+reservation2 = Reservation.create(user_id: 3, boat_id: 2, start_date: Date.new(2020, 10, 10), end_date: Date.new(2020, 10, 20), total_price: 200.0, status: false)
 puts reservation2
 
-review1 = Review.create(user_id: 3, reservation_id: 1, stars: 3, title: "pretty, pretty good", description: "bit tiny for my taste but otherwise enjoyable")
+reservation3 = Reservation.create(user_id: 4, boat_id: 3, start_date: Date.new(2020, 9, 10), end_date: Date.new(2020, 9, 20), total_price: 300.0, status: false)
+puts reservation3
+
+reservation4 = Reservation.create(user_id: 4, boat_id: 4, start_date: Date.new(2020, 11, 10), end_date: Date.new(2020, 11, 20), total_price: 350.0, status: false)
+puts reservation4
+
+reservation5 = Reservation.create(user_id: 5, boat_id: 5, start_date: Date.new(2020, 10, 10), end_date: Date.new(2020, 10, 20), total_price: 250.0, status: false)
+puts reservation5
+
+reservation6 = Reservation.create(user_id: 6, boat_id: 6, start_date: Date.new(2020, 11, 10), end_date: Date.new(2020, 11, 20), total_price: 150.0, status: false)
+puts reservation6
+
+
+# past reservations
+
+reservation7 = Reservation.create(user_id: 4, boat_id: 1, start_date: Date.new(2019, 12, 8), end_date: Date.new(2019, 12, 20), total_price: 100.0, status: false)
+puts reservation7
+
+reservation8 = Reservation.create(user_id: 4, boat_id: 2, start_date: Date.new(2019, 10, 10), end_date: Date.new(2019, 10, 20), total_price: 200.0, status: false)
+puts reservation8
+
+reservation9 = Reservation.create(user_id: 5, boat_id: 3, start_date: Date.new(2019, 9, 10), end_date: Date.new(2019, 9, 20), total_price: 300.0, status: false)
+puts reservation9
+
+reservation10 = Reservation.create(user_id: 5, boat_id: 4, start_date: Date.new(2019, 11, 10), end_date: Date.new(2019, 11, 20), total_price: 350.0, status: false)
+puts reservation10
+
+reservation11 = Reservation.create(user_id: 6, boat_id: 5, start_date: Date.new(2019, 10, 10), end_date: Date.new(2019, 10, 20), total_price: 250.0, status: false)
+puts reservation11
+
+reservation12 = Reservation.create(user_id: 1, boat_id: 6, start_date: Date.new(2019, 11, 10), end_date: Date.new(2019, 11, 20), total_price: 150.0, status: false)
+puts reservation12
+
+
+
+
+
+review1 = Review.create(user_id: 4, reservation_id: 7, stars: 3, title: "pretty, pretty good", description: "Bit tiny for my taste but otherwise enjoyable")
 puts review1
 
-review2 = Review.create(user_id: 4, reservation_id: 2, stars: 4, title: "good party boat", description: "ideal boat for bachelorette party. thank you")
+review2 = Review.create(user_id: 4, reservation_id: 8, stars: 4, title: "good party boat", description: "Ideal boat for bachelorette party. thank you")
 puts review2
+
+review3 = Review.create(user_id: 5, reservation_id: 9, stars: 2, title: "dissapointing", description: "No bathroom inside. Dissapointing")
+puts review3
+
+review4 = Review.create(user_id: 5, reservation_id: 10, stars: 4, title: "good party boat", description: "Ideal boat for bachelorette party. thank you")
+puts review4
+
+review5 = Review.create(user_id: 6, reservation_id: 11, stars: 3, title: "pretty, pretty good", description: "Bit tiny for my taste but otherwise enjoyable")
+puts review5
+
+review6 = Review.create(user_id: 1, reservation_id: 12, stars: 2, title: "dissapointing", description: "No bathroom inside. Dissapointing")
+puts review6
+
+
+
