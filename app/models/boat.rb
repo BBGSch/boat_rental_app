@@ -10,6 +10,8 @@ class Boat < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
 
   def available?(start_date, end_date)
+    #start = Date.new(start_date)
+   # end_d = Date.new(end_date)
 
     check_range = (start_date..end_date)
 

@@ -3,14 +3,17 @@
     <!-- h1>Das  <strong>Boathaus</strong></h1> -->
     <img src="https://i.ibb.co/5B2br9h/das-boathaus-1.png" alt="das-boathaus-1" border="0">
     <p>Change your life and rent a boat.</p>
+    <form class="search_form" action=<%=boats_path%> method="get">
     <div>
     <div class="search_bar">
       <row>
-      <input type="text" size=20 placeholder="Find Boats in Your City"><input type="text" size=10 placeholder="Start Date"><input type="text" size=10 placeholder="End Date"><input type="text" size=10 placeholder="Guests">
-     </row>
+           <input id="city_search" type="text" size=20 placeholder="City" name="location"><input type="number" size="10" placeholder="Distance" name = "distance"><input type="date" id="start_date" placeholder="Start Date" name = "start_date"><input type="date" placeholder="End Date" name="end_date"><input type="number" id="guests" size="10" placeholder="Guests" name="guests">
+      </row>
     </div>
     </div>
-    <a class="btn-ghost" href="#">Find Boats</a>
+    <input type="submit" value="Find a Boat" class="btn-ghost">
+    <!-- <a class="btn-ghost" href="#">Find Boats</a> -->
+    </form>
   </div>
 </div>
 

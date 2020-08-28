@@ -4,7 +4,13 @@ class BoatsController < ApplicationController
   # GET /boats
   # GET /boats.json
   def index
-    @boats = Boat.geocoded # returns boats with coordinates
+    if params[:location] == "" && params[:start_date] == ""
+      @boats = Boat.all
+    else
+      @boats = search(params)
+    end
+
+    #Boat.geocoded # returns boats with coordinates
 
     @markers = @boats.map do |boat|
       {
@@ -18,7 +24,7 @@ class BoatsController < ApplicationController
 
   def search(params)
    boats = Boat.near(params[:location], params[:distance])
-   boats.select { |boat| boat.capacity >= params[:guests] && boat.available?(params[:start_date], params[:end_date]) }
+   boats.select { |boat| boat.capacity >= params[:guests].to_i && boat.available?(params[:start_date], params[:end_date]) }
   end
 
   # GET /boats/1
