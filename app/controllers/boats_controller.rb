@@ -11,7 +11,7 @@ class BoatsController < ApplicationController
     else
       @boats = search(params)
     end
-
+###
     #Boat.geocoded # returns boats with coordinates
 
     @markers = Boat.geocoded.map do |boat|
