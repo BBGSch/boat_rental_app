@@ -11,32 +11,9 @@
 
 // Your CSS partials
 @import "components/index";
-@import "components/navbar";
-@import "components/footer";
-@import "components/banner";
-@import "components/user-card";
-@import "components/_form";
-@import "components/search_form";
-@import "components/boats-index-card";
 
-
-@import "pages/home";
-@import "pages/new";
-@import "components/boat-card";
 @import "pages/index";
-@import "pages/boats-index";
-@import "pages/boats-show";
-@import "pages/reservations-index";
-@import "pages/reservations-show";
 
-
-@import "components/boat-card";
-@import "components/reservation-card";
-@import "components/review";
-@import "pages/index";
-@import "pages/boats-index";
-@import "pages/boats-show";
-@import "pages/users_show";
 
 body {
   background-image: linear-gradient(rgba(83, 144, 217, 0.4),rgba(128, 255, 219,0.4));
@@ -46,9 +23,5 @@ body {
   justify-content: space-between;
   padding-top: 80px;
   font-family: 'Roboto', sans-serif;
-}
-
-.pages-home {
-  padding-top: 0;
 }
 
