@@ -15,8 +15,10 @@
        <div class="dropdown-content">
       <a href=<%=boats_path%>>Browse Boats</a>
       <a href=<%=reservations_path%>>My bookings</a>
+      <% if current_user.present? %>
       <a href=<%=user_path(current_user)%>>My Profile</a>
       <a href=<%=new_boat_path(current_user)%>>New Boat</a>
+      <%end%>
     </div>
 </div>
 
