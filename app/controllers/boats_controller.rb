@@ -4,7 +4,12 @@ class BoatsController < ApplicationController
   # GET /boats
   # GET /boats.json
   def index
-    @boats = search(params)
+    if params[:location] == "" && params[:start_date] == ""
+      @boats = Boat.all
+    else
+      @boats = search(params)
+    end
+
     #Boat.geocoded # returns boats with coordinates
 
     @markers = @boats.map do |boat|

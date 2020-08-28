@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/reservations/:id/confirm", to: "reservations#confirm_show", as: :confirm_reservation_show
   get "/reservations/:id/decline", to: "reservations#decline_show", as: :decline_reservation_show
 
-  resources :reservations do
+  resources :reservations, only: [:show, :index, :destroy, :create, :new] do
     resources :reviews, only: [:create, :new, :index]
   end
   resources :boats
