@@ -66,14 +66,11 @@
             <div class="post_content">
 
                 <h1><%=@boat.description%></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
-                    dolorum ex exercitationem.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
-                    dolorum ex exercitationem.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
-                    dolorum ex exercitationem.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
-                    dolorum ex exercitationem.</p>
+                <br>
+                <p>The most amazing boat in the world. Bring all of your friends and family on this boat.
+                You will not believe how great it feels to be on this boat. I am serious, you will feel the waves rocking all day
+              and it will be a great and memorable day forever. Everyone who has ever rented this boat has told me it is their absolute favorite boat.
+            Includes a dining table and oars and life jackets. Please ride this boat.</p>
 
                 <div class="container_infos">
                     <div class="postedBy">
@@ -98,12 +95,18 @@
 
                     </div>
                 </div>
+
             </div>
+
         </div>
+
     </div>
 </div>
 
-<div style="border-radius: 15px"><%= render "reviews/list",  reviews: @boat.reviews %></div>
+<div style="background-color: white; border-radius: 15px; "><%= render "reviews/list",  reviews: @boat.reviews %></div>
+
+<br>
+<br>
 </div>
 
 </div>
