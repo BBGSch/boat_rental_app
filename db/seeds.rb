@@ -29,41 +29,41 @@ boaty = Boat.create( location: "24 Tweede Helmersstraat, Amsterdam", user_id: 1,
 #boaty.save
 puts boaty
 
-titanic = Boat.create( location: "24 Prins Hendrikkade, Amsterdam", capacity: 3, user_id: 1, description: "Beautiful new boat- great for day trips", price: 110.0)
+titanic = Boat.create( location: "24 Prins Hendrikkade, Amsterdam", capacity: 3, user_id: 1, description: "Authentic wooden boat - high quality", price: 110.0)
 # titanic.user = roman
 # titanic.save
 puts titanic
 
-holland = Boat.create( location: "24 Ijsbaanpad, Amsterdam", capacity: 2, user_id: 1, description: "Beautiful gold boat- great for day trips", price: 80.0)
+holland = Boat.create( location: "24 Ijsbaanpad, Amsterdam", capacity: 2, user_id: 1, description: "Bulldog Amsterdam boat for rent - fun ensured", price: 80.0)
 # holland.user = roman
 # holland.save
 puts holland
 
-onassis = Boat.create( location: "24 Albert Cuypstraat, Amsterdam", capacity: 8, user_id: 2, description: "Beautiful living boat- great for day trips", price: 200.0)
+onassis = Boat.create( location: "24 Albert Cuypstraat, Amsterdam", capacity: 8, user_id: 2, description: "Large wooden boat incl. free drinks", price: 200.0)
 # onassis.user = jane
 # onassis.save
 puts onassis
 
-big_boat = Boat.create( location: "50 Tweede Helmersstraat, Amsterdam", capacity: 10, user_id: 2,description: "Beautiful fast boat- great for day trips", price: 111.0)
+big_boat = Boat.create( location: "50 Tweede Helmersstraat, Amsterdam", capacity: 10, user_id: 2,description: "Easy-to-use electric boat - small but fun", price: 111.0)
 # big_boat.user = jane
 # big_boat.save
 puts big_boat
 
 
 
-boatypic = URI.open('https://i.kym-cdn.com/entries/icons/facebook/000/020/374/boaty---.jpg')
+boatypic = URI.open('https://www.rederijdejordaan.amsterdam/media/boten/Salonboot-Rondvaartboot-huren-grachten-amsterdam-farahilde.jpg')
 boaty.photo.attach(io: boatypic, filename: 'boatypic.png', content_type: 'image/png')
 
-titanicpic = URI.open('https://media.nationalgeographic.org/assets/photos/000/273/27302_c0-41-990-701_r1050x700.jpg?d4ccf3044d9da0d0118103be3a76bd1319370847')
+titanicpic = URI.open('https://www.verflaag.nl/wp-content/uploads/2019/02/Houten-boot-lakken-blanke-lak.jpg')
 titanic.photo.attach(io: titanicpic, filename: 'titanicpic.png', content_type: 'image/png')
 
-hollandpic = URI.open('https://travelandynews.com/wp-content/uploads/2020/01/56523192_10156483754543406_5725163698733973504_o.jpg')
+hollandpic = URI.open('https://www.thebulldog.com/thebulldog1/wp-content/uploads/The-Bulldog-Boat-2020.jpg')
 holland.photo.attach(io: hollandpic, filename: 'hollandpic.png', content_type: 'image/png')
 
-onassispic = URI.open('https://greece.greekreporter.com/files/606x341_230948_poleitai-xristina-o-onasis-ploi-696x391-1.jpg')
+onassispic = URI.open('https://flyingdutchboats.com/wp-content/uploads/2018/10/flyingdutchboats.com_d79b_1524058578-whatsapp-image-2017-12-02-at-15-58-24-2-1920x750_c.jpeg')
 onassis.photo.attach(io: onassispic, filename: 'onassispic.png', content_type: 'image/png')
 
-big_boatpic = URI.open('https://news.gtp.gr/wp-content/uploads/2000/06/STRINTZIS-ITHAKI.jpg')
+big_boatpic = URI.open('https://mokumbootverhuur.nl/wp-content/uploads/2019/04/19-min-1-1024x380.jpg')
 big_boat.photo.attach(io: big_boatpic, filename: 'big_boatpic.png', content_type: 'image/png')
 
 
@@ -82,7 +82,7 @@ puts reservation4
 reservation5 = Reservation.create(user_id: 5, boat_id: 5, start_date: Date.new(2020, 10, 10), end_date: Date.new(2020, 10, 20), total_price: 250.0, status: false)
 puts reservation5
 
-reservation6 = Reservation.create(user_id: 6, boat_id: 6, start_date: Date.new(2020, 11, 10), end_date: Date.new(2020, 11, 20), total_price: 150.0, status: false)
+reservation6 = Reservation.create(user_id: 6, boat_id: 1, start_date: Date.new(2020, 11, 10), end_date: Date.new(2020, 11, 20), total_price: 150.0, status: false)
 puts reservation6
 
 
@@ -103,7 +103,7 @@ puts reservation10
 reservation11 = Reservation.create(user_id: 6, boat_id: 5, start_date: Date.new(2019, 10, 10), end_date: Date.new(2019, 10, 20), total_price: 250.0, status: false)
 puts reservation11
 
-reservation12 = Reservation.create(user_id: 1, boat_id: 6, start_date: Date.new(2019, 11, 10), end_date: Date.new(2019, 11, 20), total_price: 150.0, status: false)
+reservation12 = Reservation.create(user_id: 6, boat_id: 1, start_date: Date.new(2019, 11, 10), end_date: Date.new(2019, 11, 20), total_price: 150.0, status: false)
 puts reservation12
 
 
@@ -125,7 +125,7 @@ puts review4
 review5 = Review.create(user_id: 6, reservation_id: 11, stars: 3, title: "pretty, pretty good", description: "Bit tiny for my taste but otherwise enjoyable")
 puts review5
 
-review6 = Review.create(user_id: 1, reservation_id: 12, stars: 2, title: "dissapointing", description: "No bathroom inside. Dissapointing")
+review6 = Review.create(user_id: 6, reservation_id: 12, stars: 2, title: "dissapointing", description: "No bathroom inside. Dissapointing")
 puts review6
 
 
