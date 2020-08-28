@@ -21,23 +21,8 @@
 @import "components/reservation-form";
 
 
-@import "pages/home";
-@import "pages/new";
-@import "components/boat-card";
 @import "pages/index";
-@import "pages/boats-index";
-@import "pages/boats-show";
-@import "pages/reservations-index";
-@import "pages/reservations-show";
 
-
-@import "components/boat-card";
-@import "components/reservation-card";
-@import "components/review";
-@import "pages/index";
-@import "pages/boats-index";
-@import "pages/boats-show";
-@import "pages/users_show";
 
 body {
   background-image: linear-gradient(rgba(116, 0, 184, .4),rgba(105, 48, 195, .4),rgba(94, 96, 206, .4),rgba(78, 168, 222, .4), rgba(72, 191, 227, .4), rgba(86, 207, 225, .4), rgba(114, 239, 221, .4), rgba(128, 255, 219,0.4));
@@ -58,9 +43,5 @@ body {
       text-decoration: none;
     }
   }
-}
-
-.pages-home {
-  padding-top: 0;
 }
 

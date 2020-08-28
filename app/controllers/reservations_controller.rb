@@ -16,6 +16,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    # @reservation.boat = Boat.find(params[:format])
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
     @reservation.save
