@@ -88,7 +88,7 @@
                     <div class="container_tags">
                         <span></span>
                         <div class="tags">
-                          <%=link_to new_reservation_path(@boat) do%>
+                          <%=link_to new_reservation_path(@boat.id) do%>
                             <ul>
                                 <li>$<%=@boat.price%>/day</li>
                                 <li>Book</li>
