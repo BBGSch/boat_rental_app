@@ -43,7 +43,7 @@
 
         </div>
 
-        <% if Date.today > @reservation.end_date && reservation.status%>
+        <% if Date.today > @reservation.end_date && @reservation.status%>
         <div><%= render "reviews/form",  reservation: @reservation, review: @review %></div>
         <%end%>
       </div>
