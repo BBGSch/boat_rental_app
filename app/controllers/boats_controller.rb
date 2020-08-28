@@ -15,7 +15,9 @@ class BoatsController < ApplicationController
     @markers = @boats.map do |boat|
       {
         lat: boat.latitude,
-        lng: boat.longitude
+        lng: boat.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { boat: boat }),
+        image_url: helpers.asset_url("http://res.cloudinary.com/majel45/image/upload/c_fill,h_50,w_50/#{boat.photo.key}")
       }
     end
   end
