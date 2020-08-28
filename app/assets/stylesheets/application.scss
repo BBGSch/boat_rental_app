@@ -11,17 +11,37 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/navbar";
+@import "components/footer";
+@import "components/banner";
+@import "components/user-card";
+@import "components/_form";
+@import "components/search_form";
+@import "components/boats-index-card";
+@import "components/reservation-form";
+
 
 @import "pages/index";
 
 
 body {
-  background-image: linear-gradient(rgba(83, 144, 217, 0.4),rgba(128, 255, 219,0.4));
+  background-image: linear-gradient(rgba(116, 0, 184, .1),rgba(105, 48, 195, .1),rgba(94, 96, 206, .4),rgba(78, 168, 222, .4), rgba(72, 191, 227, .4), rgba(86, 207, 225, .4), rgba(114, 239, 221, .4), rgba(128, 255, 219,0.4));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 80px;
   font-family: 'Roboto', sans-serif;
+  color: rgba(0,0,0,.7);
+  transition: color .3s;
+
+  a{
+    text-decoration: none;
+    color: rgba(0,0,0,.7);
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
 }
 
