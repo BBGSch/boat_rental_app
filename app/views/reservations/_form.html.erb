@@ -3,15 +3,15 @@
   <%= r.error_notification message: r.object.errors[:base].to_sentence if r.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= r.input :boat_id %>
-    <%= r.input :start_date %>
-    <%= r.input :end_date %>
+    <%= r.input :boat_id, input_html: { style: "display: none" }, :label => "Choose your dates" %>
+    <%= r.input :start_date, input_html: { style: "border-radius: 5px" }%>
+    <%= r.input :end_date, input_html: { style: "border-radius: 5px" } %>
   </div>
 
   <div class="form-actions">
-    <%= r.button :submit, class: "btn btn-primary" %>
-    <button class="btn btn-secondary"> 
-      <%= link_to 'Back', reservations_path %> 
+    <%= r.button :submit, class: "btn-ghost"  %>
+    <button class="btn-ghost" style="border-radius: 5px>
+      <%= link_to 'Back', reservations_path %>
     </button>
 
   </div>

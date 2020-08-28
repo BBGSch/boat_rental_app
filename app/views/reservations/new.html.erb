@@ -1,18 +1,13 @@
-<div class="container container-new">
-  <div class="row">
-    <div class="col-6">
-    
-      <h1>New Reservation</h1>
-
-      <%= render 'form', reservation: @reservation %>
-
-    </div>
-  </div>
-</div>
-
-
 
 <div class="boats_show">
+
+  <div class="col-6">
+
+
+
+
+
+    </div>
 
 <div class="boats-index-card">
 <div id="boatshowcontainer" class="container">
@@ -49,12 +44,9 @@
                     <div class="container_tags">
                         <span></span>
                         <div class="tags">
-                          <%=link_to new_reservation_path(@reservation.boat) do%>
                             <ul>
                                 <li>$<%=@reservation.boat.price%>/day</li>
-                                <li>Book</li>
                             </ul>
-                            <%end%>
                         </div>
 
                     </div>
@@ -66,5 +58,15 @@
 
 </div>
 
-<div><%= render "reviews/list",  reviews: @reservation.boat.reviews %></div>
+<div class="container container-new">
+  <div class="row">
+    <div class="col-6">
+
+
+
+      <%= render 'form', reservation: @reservation %>
+
+    </div>
+  </div>
 </div>
+

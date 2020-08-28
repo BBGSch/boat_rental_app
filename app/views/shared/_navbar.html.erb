@@ -4,7 +4,12 @@
   </div>
 
   <div>
-  <% if current_user  %>
+    <img src="https://i.ibb.co/5B2br9h/das-boathaus-1.png" width="150px" style="opacity: .7" alt="das-boathaus-1" border="0">
+  </div>
+
+  <div>
+
+
     <div class="dropdown">
       <li><a href="about.asp"><i class="fas fa-user-alt"></i></a></li>
        <div class="dropdown-content">
@@ -13,7 +18,6 @@
       <a href=<%=user_path(current_user)%>>My Profile</a>
       <a href=<%=new_boat_path(current_user)%>>New Boat</a>
     </div>
-  <% end %>
 </div>
 
   </div>

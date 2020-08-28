@@ -9,14 +9,15 @@
         <div class="card-reservation-infos">
           <div>
             <h2><%= @reservation.boat.description %></h2>
-            <h2><%= @reservation.start_date %> - <%= @reservation.end_date %></h2>
+            <h2>Trip Dates: <%= @reservation.start_date %> until <%= @reservation.end_date %></h2>
             <h4>
               <%#= @reservation.status ? "confirmed" : "unconfirmed" %>
               <% if @reservation.status %>
                 <span class="badge badge-success">Confirmed</span>
               <% else %>
                 <span class="badge badge-warning">Unconfirmed</span>
-              <% end %>              
+              <% end %>
+              <h2 class="card-reservation-pricing">Total: $<%= @reservation.total_price %></h2>
 
 
 
@@ -26,23 +27,25 @@
 
 
                 <%if current_user == @reservation.boat.user %>
-                   <button type="button" class="btn btn-primary">
+                   <button type="button" class="btn-ghost">
                     <%= link_to "Confirm", confirm_reservation_path(@reservation), method: :patch, data: { confirm: "Are you sure?" } %>
                   </button>
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" class="btn-ghost">
                     <%= link_to "Deny", decline_reservation_path(@reservation), method: :delete, data: { confirm: "Are you sure?" } %>
                   </button>
                 <%elsif current_user == @reservation.user %>
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" class="btn-ghost" style="background-color:rgba(105, 48, 195, 0.4)">
                     <%= link_to "Cancel", reservation_path(@reservation), method: :delete, data: { confirm: "Are you sure?" } %>
                   </button>
                 <%end%>
           </div>
 
-          <h2 class="card-reservation-pricing"><%= @reservation.total_price %></h2>
-        </div>
-        <div><%= render "reviews/form",  reservation: @reservation, review: @review %></div>
 
+        </div>
+
+        <% if Date.today > @reservation.end_date && reservation.status%>
+        <div><%= render "reviews/form",  reservation: @reservation, review: @review %></div>
+        <%end%>
       </div>
 </div>
 
