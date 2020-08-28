@@ -4,15 +4,17 @@ class BoatsController < ApplicationController
   # GET /boats
   # GET /boats.json
   def index
-    if params[:location] == "" && params[:start_date] == ""
-      @boats = Boat.all
+    if !params.include?(:city)
+      @boats = Boat.geocoded
+    elsif params[:location] == "" && params[:start_date] == ""
+      @boats = Boat.geocoded
     else
       @boats = search(params)
     end
 
     #Boat.geocoded # returns boats with coordinates
 
-    @markers = @boats.map do |boat|
+    @markers = Boat.geocoded.map do |boat|
       {
         lat: boat.latitude,
         lng: boat.longitude,

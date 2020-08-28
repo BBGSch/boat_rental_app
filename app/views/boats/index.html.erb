@@ -17,8 +17,10 @@
      <%= link_to boat_path(boat) do %>
 <div class="boats-index-card">
 <div class="container">
+    <div class="boats-index-card">
+<div class="container">
     <div class="post">
-        <div class="header_post">
+                <div class="header_post">
             <% if boat.photo.attached? %>
           <%= cl_image_tag boat.photo.key, height: 800, width: 800, crop: :fill %>
         <% end %>
@@ -27,32 +29,22 @@
         <div class="body_post">
             <div class="post_content">
 
-                <h1><%= boat.description %></h1>
-                <p><%= boat.location %>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
+                <h1><%=boat.description%></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi assumenda cumque deserunt
                     dolorum ex exercitationem.</p>
 
                 <div class="container_infos">
-
                     <div class="postedBy">
-
                         <span>Rented by</span>
-                        John Doe
-                    </div>
-                    <div>
-                    <a href=<%=user_path(boat.user)%>>
-                        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-                      </a>
-                    </div>
+                        <%=boat.user.name%>                    </div>
 
                     <div class="container_tags">
-
+                        <span></span>
                         <div class="tags">
-                          <%= link_to boat_path(boat) do %>
                             <ul>
-                                <li>€ <%= boat.price %>/day</li>
-                                <li>Book Now</li>
+                                <li>$<%=boat.price%></li>
+                                <li>Book</li>
                             </ul>
-                            <%end%>
                         </div>
 
                     </div>
@@ -61,11 +53,16 @@
         </div>
     </div>
 </div>
+
+</div>
 </div>
     <% end %>
+    <br>
+    <br>
     <% end %>
 
 <%= render 'boat_map', markers: @markers %>
+</div>
 
 <!--
 
